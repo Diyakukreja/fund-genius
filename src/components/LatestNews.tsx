@@ -8,6 +8,7 @@ interface NewsItem {
   readTime: string;
   image: string;
   description: string;
+  url:string;
 }
 
 const API_KEY = "d2bpn59r01qvh3vcqemgd2bpn59r01qvh3vcqen0";
@@ -31,6 +32,7 @@ const LatestNews: React.FC = () => {
           readTime: `${Math.floor(Math.random() * 5) + 3} min read`, // fake read time
           image: item.image || "https://via.placeholder.com/400x200?text=No+Image",
           description: item.summary || "",
+          url: item.url || "#"
         }));
 
         setNewsData(mappedData);
@@ -70,6 +72,7 @@ const LatestNews: React.FC = () => {
               key={item.id}
               className="bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
             >
+              <a href={item.url}>
               <img
                 src={item.image}
                 alt={item.title}
@@ -89,6 +92,7 @@ const LatestNews: React.FC = () => {
                   {item.description}
                 </p>
               </div>
+              </a>
             </article>
           ))}
         </div>

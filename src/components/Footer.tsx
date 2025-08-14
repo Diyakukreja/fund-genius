@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, Facebook, Twitter, Linkedin, Youtube, Instagram } from 'lucide-react';
+import {Facebook, Twitter, Linkedin, Youtube, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const [email, setEmail] = useState('');

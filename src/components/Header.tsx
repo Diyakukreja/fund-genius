@@ -1,5 +1,4 @@
 import React from 'react';
-import { TrendingUp, Search, User} from 'lucide-react';
 import { Link } from 'react-router';
 
 const Header: React.FC = () => {
